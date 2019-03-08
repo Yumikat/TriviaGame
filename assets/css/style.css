@@ -1,0 +1,21 @@
+body {
+   
+    text-align: center;
+}
+#start-button, p {
+    font-family: 'Felipa', cursive;
+}
+h1 {
+    font-family: 'Bilbo', cursive;
+    /* font-family: 'Felipa', cursive; */
+    /* font-family: 'Tangerine', cursive; */
+}
+
+.questions {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.answers {
+    font-size: 20px;
+}
