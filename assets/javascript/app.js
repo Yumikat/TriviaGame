@@ -13,14 +13,12 @@ function scoring() {
     for (var i = 0; i < 10; i++) {
     if (answersChosen[i] === correctAnswers[i]){
         correctGuesses++;
-    } else if (answersChosen[i] = "undefined") {
-        unansweredQuestions++;
     } else {
         incorrectGuesses++;
     }
 }
 }
-
+// (answersChosen[i] !== correctAnswers[i])
 // var questions = [
 //     { q: "Who wrote the 'Lord of the Rings' triology books?", a: "J. R. R. Tolkien" }
 //     { q: "Who composed the music for the LOTR movies?", a: "Howard Shore" }
@@ -79,26 +77,67 @@ $("#submit").on("click", function () {
 function getValues() {
     // $(document).ready(function () {
     //     $("input[type='submit']").click(function () {
-            var radioValue = $("input[name='questionOne']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionTwo']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionThree']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionFour']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionFive']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionSix']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionSeven']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionEight']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionNine']:checked").val();
-            answersChosen.push(radioValue);
-            var radioValue = $("input[name='questionTen']:checked").val();
-            answersChosen.push(radioValue);
+            if($("#one").checked) {
+                var radioValue = $("input[name='questionOne']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#two").checked) {var radioValue = $("input[name='questionTwo']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#three").checked) {var radioValue = $("input[name='questionThree']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#four").checked) {var radioValue = $("input[name='questionFour']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#five").checked) {var radioValue = $("input[name='questionFive']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#six").checked) {var radioValue = $("input[name='questionSix']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#seven").checked) {var radioValue = $("input[name='questionSeven']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#eight").checked) {var radioValue = $("input[name='questionEight']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#nine").checked) {var radioValue = $("input[name='questionNine']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
+            if($("#ten").checked) {var radioValue = $("input[name='questionTen']:checked").val();
+            answersChosen.push(radioValue);}
+            else {
+                unansweredQuestions++;
+                incorrectGuesses--;
+            }
             scoring();
             console.log("Answers chosen", answersChosen);
             console.log("Correct answers", correctAnswers);
