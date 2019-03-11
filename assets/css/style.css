@@ -1,21 +1,44 @@
 body {
-   
     text-align: center;
+    background: black;
+   /* background-repeat: no-repeat; */
+   /* background-position: bottom; */
 }
-#start-button, p {
+
+#start-button, p, .font, h3, .submit {
     font-family: 'Felipa', cursive;
+    font-size: 25px;
+    font-weight: bold; 
 }
 h1 {
     font-family: 'Bilbo', cursive;
-    /* font-family: 'Felipa', cursive; */
-    /* font-family: 'Tangerine', cursive; */
+    padding: 20px;
+    font-weight: bold; 
 }
 
 .questions {
-    font-weight: bold;
+    
     font-size: 25px;
 }
 
 .answers {
     font-size: 20px;
+}
+
+.container, #quiz-page {
+    background: white;
+    opacity: 0.9;
+    height: 100%;
+}
+
+#start-button:hover, .submit:hover, h3 {
+    color: red;
+}
+
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+  }
+
+.submit {
+    margin: 20px;
 }
