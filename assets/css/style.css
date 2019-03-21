@@ -42,3 +42,9 @@ input[type="radio"]{
 .submit {
     margin: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    html {
+        width: 100%;
+    }
+  }
